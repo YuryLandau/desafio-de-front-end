@@ -1,24 +1,12 @@
 import "./globals.css";
 
 import type { Metadata } from "next";
-import { Inter, Montserrat, Oxanium } from "next/font/google";
+import { Inter } from "next/font/google";
 
 export const metadata: Metadata = {
-  title: "Nimbus Weather",
+  title: "Weather",
   description: "Desafio Frontend - TDS",
 };
-
-const oxanium = Oxanium({
-  subsets: ["latin"], // Biblioteca de caracteres
-  weight: ["500", "600"], // Pesos da fonte
-  variable: "--font-oxanium", // Variável CSS
-});
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-montserrat",
-});
 
 const inter = Inter({
   subsets: ["latin"],
@@ -32,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${oxanium.variable} ${montserrat.variable} ${inter.variable} `}>
+    <html lang="en" className={`${inter.variable} `}>
       <body>
         {children}
       </body>
