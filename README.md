@@ -9,7 +9,7 @@ Criar um web app que liste cidades específicas (listadas abaixo) e, após a sel
 
 ## Layout
 
-- [Link do layout no InVision](https://explosion.invisionapp.com/public/share/SX19J12TJR#screens/476656918)
+- [Link do layout no Figma](https://www.figma.com/design/4lcFZPwbuAxjBiUutFK9Qd)
 
 ## Hospedagem
 
