@@ -4,3 +4,4 @@ const API_FORECAST_URL = `${API_URL}forecast?units=metric&exclude=current,minute
 const API_WEATHER_URL = `${API_URL}weather?units=metric&exclude=current,minutely,daily,alerts&appid=${API_KEY}&lang=pt_br`;
 
 export { API_FORECAST_URL, API_WEATHER_URL };
+export default API_URL
