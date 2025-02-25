@@ -41,7 +41,7 @@ export default async function SearchByCity(props: SearchByCityProps) {
       className="group mx-auto px-5 py-8 md:py-36 bg-gray-200 text-gray-600 data-[day=true]:bg-blue data-[day=true]:text-gray-100">
       <div className="min-h-dvh flex flex-col items-center justify-center">
         <div className="flex flex-col items-center w-full ">
-          <h2 className="text-5xl font-light pb-1">
+          <h2 className="text-5xl text-center font-light pb-1">
             {capitalizeFirstLetter(searched_city)} ({weatherJSON.sys.country})
           </h2>
 

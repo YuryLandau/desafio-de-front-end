@@ -10,11 +10,11 @@ const CurrentTemp = ({ main }: CurrentTempProps) => {
             <div className="flex gap-2">
                 <h1 className="text-9xl">{Math.round(main.temp)}</h1>
 
-                <div className="flex flex-col justify-center pt-4 pb-2">
+                <div className="flex flex-col justify-center pl-2 pt-4 pb-2">
                     <div className="flex flex-col justify-between items-center gap-6">
                         <span className="text-4xl">°C</span>
 
-                        <div className="flex flex-col justify-center items-end">
+                        <div className="flex flex-col justify-center items-start">
                             <div className="flex items-center text-lg">
                                 <Image className="toggle-fill-svg" src={`/assets/icons/arrow-up.svg`} alt={""} width={18} height={18} /> {Math.round(main.temp_max)}°
                             </div>

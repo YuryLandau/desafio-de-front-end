@@ -24,9 +24,13 @@
         @apply text-xl ;
     }
 
+    .stats-border_odd {
+        @apply relative before:content-[''] before:block before:h-[50%] before:w-[2px] before:bg-gray-150 before:absolute before:-right-3 before:top-1/4;
+    }
+
     @media (min-width: 768px) {
-        .stats-border {
-            @apply relative md:before:content-[''] before:block before:h-[50%] before:w-[2px] before:bg-gray-150 before:absolute before:right-0 before:top-1/4;
+        .stats-border_even {
+            @apply relative before:content-[''] before:block before:h-[50%] before:w-[2px] before:bg-gray-150 before:absolute before:right-0 before:top-1/4;
         }
     }
 }

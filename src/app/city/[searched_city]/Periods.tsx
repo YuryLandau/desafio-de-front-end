@@ -15,7 +15,7 @@ const PeriodRoot = ({ header, temperature, children, ...props }: PeriodRootProps
                 ? "Afternoon" : "Night"
 
     return (
-        <div className="flex flex-col items-center justify-center gap-4 " {...props}>
+        <div className="min-w-[90px] flex flex-col items-center justify-center gap-4 " {...props}>
             <span className="text-xl">
                 {periodHeader}
             </span>
@@ -37,7 +37,7 @@ const Periods = (props: PeriodProps) => {
     const { forecastList } = props;
 
     return (
-        <div className="grid gap-12 md:grid-cols-4 pb-16">
+        <div className="flex flex-row flex-wrap gap-6 md:gap-12 items-center justify-center pb-6 md:pb-16">
 
             {
                 forecastList.filter((forecast) => forecast.dt_txt.includes("03:00:00")
@@ -53,7 +53,6 @@ const Periods = (props: PeriodProps) => {
                         </PeriodRoot>
                     ))
             }
-
         </div>
     )
 }
