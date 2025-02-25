@@ -23,7 +23,7 @@ const PeriodRoot = ({ header, temperature, children, ...props }: PeriodRootProps
             {children}
 
             <span className="text-xl">
-                {`${temperature}°C` ?? '-'}
+                {`${temperature}°C`}
             </span>
         </div>
     )
