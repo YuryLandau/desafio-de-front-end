@@ -37,7 +37,7 @@ const Periods = (props: PeriodProps) => {
     const { forecastList } = props;
 
     return (
-        <div className="grid gap-12 md:grid-cols-4">
+        <div className="grid gap-12 md:grid-cols-4 pb-16">
 
             {
                 forecastList.filter((forecast) => forecast.dt_txt.includes("03:00:00")

@@ -1,26 +1,26 @@
 import { WeatherMain } from "@/app/types/weather"
-import { ArrowDown, ArrowUp } from "lucide-react"
+import Image from "next/image"
 
 interface CurrentTempProps {
     main: WeatherMain
 }
 const CurrentTemp = ({ main }: CurrentTempProps) => {
     return (
-        <div className="pt-2">
-            <div className="flex font-extralight py-2">
-                <span className="text-9xl">{Math.round(main.temp)}</span>
+        <div className="py-6 font-extralight">
+            <div className="flex gap-2">
+                <h1 className="text-9xl">{Math.round(main.temp)}</h1>
 
-                <div className="flex flex-col justify-center">
-                    <div className="flex flex-col justify-between items-center gap-4">
-                        <span className="text-3xl">°C</span>
+                <div className="flex flex-col justify-center pt-4 pb-2">
+                    <div className="flex flex-col justify-between items-center gap-6">
+                        <span className="text-4xl">°C</span>
 
-                        <div className="flex flex-col justify-center text-xl">
-                            <div className="flex items-center">
-                                <ArrowUp className="size-5" /> {Math.round(main.temp_max)}°
+                        <div className="flex flex-col justify-center items-end">
+                            <div className="flex items-center text-lg">
+                                <Image src={`/assets/icons/arrow-up.svg`} alt={""} width={18} height={18} /> {Math.round(main.temp_max)}°
                             </div>
 
-                            <div className="flex items-center">
-                                <ArrowDown className="size-5" /> {Math.round(main.temp_min)}°
+                            <div className="flex items-center text-lg">
+                                <Image src={`/assets/icons/arrow-down.svg`} alt={""} width={18} height={18} /> {Math.round(main.temp_min)}°
                             </div>
                         </div>
                     </div>

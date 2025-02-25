@@ -16,6 +16,10 @@
 
 @layer utilities {
 
+    .stats-font-setup{
+        @apply text-xl ;
+    }
+
     @media (min-width: 768px) {
         .stats-border {
             @apply relative md:before:content-[''] before:block before:h-[50%] before:w-[2px] before:bg-gray-150 before:absolute before:right-0 before:top-1/4;

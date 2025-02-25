@@ -36,20 +36,20 @@ export default async function SearchByCity(props: SearchByCityProps) {
   }
 
   return (
-    <main className="mx-auto px-5 py-8 bg-gray-900 text-antique-100">
+    <main className="mx-auto px-5 py-8 md:py-36 bg-gray-200 text-gray-600">
       <div className="min-h-dvh flex flex-col items-center justify-center">
         <div className="flex flex-col items-center w-full ">
-          <h2 className="text-4xl ">
+          <h2 className="text-5xl font-light pb-1">
             {capitalizeFirstLetter(searched_city)} ({weatherJSON.sys.country})
           </h2>
 
-          <p className="text-xl">
+          <h3 className="text-2xl font-extralight">
             {capitalizeFirstLetter(weatherJSON.weather[0].description)}
-          </p>
+          </h3>
 
           <CurrentTemp main={weatherJSON.main} />
 
-          <Image src={`https://openweathermap.org/img/wn/${weatherJSON.weather[0].icon}@4x.png`} alt={capitalizeFirstLetter(weatherJSON.weather[0].description)} width={200} height={200} />
+          <Image src={`/assets/icons/${weatherJSON.weather[0].icon}.svg`} alt={capitalizeFirstLetter(weatherJSON.weather[0].description)} width={176} height={176} />
 
           <Periods forecastList={forecastJSON} />
 
