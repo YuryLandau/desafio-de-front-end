@@ -1,4 +1,4 @@
-import { API_FORECAST_URL, API_WEATHER_URL } from "@/app/constants/app_constants";
+import { getForecast, getWeather } from "@/app/services/weather_services";
 import { ForecastRoot } from "@/app/types/forecast";
 import { WeatherRoot } from "@/app/types/weather";
 import { capitalizeFirstLetter } from "@/utils/string_transform";
@@ -18,15 +18,10 @@ export default async function SearchByCity(props: SearchByCityProps) {
   const { searched_city } = await props.params;
 
   // Fetch forecast from API
-  const forecastJSON: ForecastRoot[] = await fetch(`${API_FORECAST_URL}&q=${searched_city}`)
-    .then((res) => res.json())
-    .then(res => res.list)
-    .catch((err) => console.log(err));
+  const forecastJSON: ForecastRoot[] = await getForecast(searched_city)
 
   // Fetch weather from API
-  const weatherJSON: WeatherRoot = await fetch(`${API_WEATHER_URL}&q=${searched_city}`)
-    .then((res) => res.json())
-    .catch((err) => console.log(err));
+  const weatherJSON: WeatherRoot = await getWeather(searched_city)
 
   const dayStats = {
     humidity: weatherJSON.main.humidity,
