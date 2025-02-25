@@ -11,44 +11,44 @@ interface StatsProps {
 const Stats = ({ dayStats }: StatsProps) => {
     return (
         <div className="grid md:grid-cols-4 pt-12">
-            <div className="flex flex-col items-center justify-center gap-1 px-4 stats-border ">
-                <span className="text-xl">
+            <div className="flex flex-col items-center justify-center gap-1 px-4 py-2 md:py-0 stats-border border-b-2 border-beje-300 md:border-b-0">
+                <span className="stats-text">
                     Wind speed
                 </span>
 
-                <span className="text-xl">
+                <span className="stats-text">
                     {dayStats.windSpeed}m/s
                 </span>
             </div>
 
-            <div className="flex flex-col items-center justify-center gap-1 px-4 stats-border">
-                <span className="text-xl">
+            <div className="flex flex-col items-center justify-center gap-1 px-4 py-2 md:py-0 stats-border border-b-2 border-beje-300 md:border-b-0">
+                <span className="stats-text">
                     Sunrise
                 </span>
 
 
-                <span className="text-xl">
-                    {new Date(dayStats.sunrise * 1000).toLocaleTimeString()}
+                <span className="stats-text">
+                    {new Date(dayStats.sunrise * 1000).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
                 </span>
             </div>
 
-            <div className="flex flex-col items-center justify-center gap-1 px-4 stats-border">
-                <span className="text-xl">
+            <div className="flex flex-col items-center justify-center gap-1  px-4 py-2 md:py-0 stats-border border-b-2 border-beje-300 md:border-b-0">
+                <span className="stats-text">
                     Sunset
                 </span>
 
-                <span className="text-xl">
-                    {new Date(dayStats.sunset * 1000).toLocaleTimeString()}
+                <span className="stats-text">
+                    {new Date(dayStats.sunset * 1000).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
                 </span>
             </div>
 
             <div className="flex flex-col items-center justify-center px-4 gap-1 ">
-                <span className="text-xl">
+                <span className="stats-text">
                     Humidity
                 </span>
 
 
-                <span className="text-xl">
+                <span className="stats-text">
                     {dayStats.humidity}%
                 </span>
             </div>

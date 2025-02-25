@@ -8,13 +8,13 @@ const CurrentTemp = ({ main }: CurrentTempProps) => {
     return (
         <div className="pt-2">
             <div className="flex font-extralight py-2">
-                <span className="text-9xl">{Math.round(main.temp)}</span>
+                <span className="text-9xl text-beje-200">{Math.round(main.temp)}</span>
 
                 <div className="flex flex-col justify-center">
                     <div className="flex flex-col justify-between items-center gap-4">
                         <span className="text-3xl">°C</span>
 
-                        <div className="flex flex-col justify-center text-gray-500 text-xl">
+                        <div className="flex flex-col justify-center text-antique-100 text-xl">
                             <div className="flex items-center">
                                 <ArrowUp className="size-5" /> {Math.round(main.temp_max)}°
                             </div>
