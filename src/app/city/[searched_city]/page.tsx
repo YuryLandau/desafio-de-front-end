@@ -51,7 +51,7 @@ export default async function SearchByCity(props: SearchByCityProps) {
 
           <CurrentTemp main={weatherJSON.main} />
 
-          <Image className="toggle-fill-svg" src={`/assets/icons/${weatherJSON.weather[0].icon}.svg`} alt={capitalizeFirstLetter(weatherJSON.weather[0].description)} width={176} height={176} />
+          <Image className="toggle-fill-svg pb-6" src={`/assets/icons/${weatherJSON.weather[0].icon}.svg`} alt={capitalizeFirstLetter(weatherJSON.weather[0].description)} width={176} height={176} />
 
           <Periods forecastList={forecastJSON} />
 
