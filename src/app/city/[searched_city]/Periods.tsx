@@ -49,7 +49,7 @@ const Periods = (props: PeriodProps) => {
                             header={forecast.dt_txt}
                             temperature={forecast.main.temp.toFixed(0)}>
 
-                            <Image src={`/assets/icons/${forecast.weather[0].icon}.svg`} alt={forecast.weather[0].description} width={48} height={48} />
+                            <Image className="toggle-fill-svg" src={`/assets/icons/${forecast.weather[0].icon}.svg`} alt={forecast.weather[0].description} width={48} height={48} />
                         </PeriodRoot>
                     ))
             }

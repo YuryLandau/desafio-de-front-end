@@ -36,7 +36,9 @@ export default async function SearchByCity(props: SearchByCityProps) {
   }
 
   return (
-    <main className="mx-auto px-5 py-8 md:py-36 bg-gray-200 text-gray-600">
+    <main
+      data-day={weatherJSON.weather[0].icon.includes("d")}
+      className="group mx-auto px-5 py-8 md:py-36 bg-gray-200 text-gray-600 data-[day=true]:bg-blue data-[day=true]:text-gray-100">
       <div className="min-h-dvh flex flex-col items-center justify-center">
         <div className="flex flex-col items-center w-full ">
           <h2 className="text-5xl font-light pb-1">
@@ -49,7 +51,7 @@ export default async function SearchByCity(props: SearchByCityProps) {
 
           <CurrentTemp main={weatherJSON.main} />
 
-          <Image src={`/assets/icons/${weatherJSON.weather[0].icon}.svg`} alt={capitalizeFirstLetter(weatherJSON.weather[0].description)} width={176} height={176} />
+          <Image className="toggle-fill-svg" src={`/assets/icons/${weatherJSON.weather[0].icon}.svg`} alt={capitalizeFirstLetter(weatherJSON.weather[0].description)} width={176} height={176} />
 
           <Periods forecastList={forecastJSON} />
 

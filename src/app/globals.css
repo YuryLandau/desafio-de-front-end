@@ -16,6 +16,10 @@
 
 @layer utilities {
 
+    .toggle-fill-svg {
+        @apply group-data-[day=true]:dark:invert
+    }
+
     .stats-font-setup{
         @apply text-xl ;
     }

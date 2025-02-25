@@ -16,11 +16,11 @@ const CurrentTemp = ({ main }: CurrentTempProps) => {
 
                         <div className="flex flex-col justify-center items-end">
                             <div className="flex items-center text-lg">
-                                <Image src={`/assets/icons/arrow-up.svg`} alt={""} width={18} height={18} /> {Math.round(main.temp_max)}°
+                                <Image className="toggle-fill-svg" src={`/assets/icons/arrow-up.svg`} alt={""} width={18} height={18} /> {Math.round(main.temp_max)}°
                             </div>
 
                             <div className="flex items-center text-lg">
-                                <Image src={`/assets/icons/arrow-down.svg`} alt={""} width={18} height={18} /> {Math.round(main.temp_min)}°
+                                <Image className="toggle-fill-svg" src={`/assets/icons/arrow-down.svg`} alt={""} width={18} height={18} /> {Math.round(main.temp_min)}°
                             </div>
                         </div>
                     </div>
